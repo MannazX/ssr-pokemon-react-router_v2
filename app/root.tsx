@@ -6,9 +6,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
+import { Provider } from "react-redux";
+import { makeStore } from "./store";
 import type { Route } from "./+types/root";
 import "./app.css";
+import SearchOptions from "./components/pokemonSearchOptions";
+
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,6 +26,8 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+const store = makeStore();
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -32,8 +37,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
+      <body className="bg-slate-900 text-slate-100 min-h-screen">
+        <Provider store={store}>
+          <header className="bg-slate-800 border-b border-slate-700 py-4">
+            <div className="container mx-auto px-4">
+              <div className="max-w-md mx-auto mb-4">
+                <h1 className="text-2xl font-bold text-white mb-2">Pokemon Search</h1>
+                <SearchOptions />
+              </div>
+              <div className="flex justify-center gap-6 text-lg font-medium">
+                <a href='/' className="text-slate-300 hover:text-white hover:underline transition-colors">Home</a>
+                <a href='/kanto' className="text-slate-300 hover:text-white hover:underline transition-colors">Kanto</a>
+              </div>
+            </div>
+          </header>
+          <main className="container mx-auto px-4 py-6">
+            {children}
+          </main>
+        </Provider>
         <ScrollRestoration />
         <Scripts />
       </body>

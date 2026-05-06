@@ -7,7 +7,21 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-slate-900;
+  @apply text-slate-100;
+  @apply text-blue-400 hover:text-blue-300;
+
+  .card {
+    @apply bg-slate-800 text-white border-slate-700;
+  }
+
+  .card-header {
+    @apply bg-slate-700 border-slate-600 text-white;
+  }
+
+  .form-control, .form-select {
+    @apply bg-slate-900 text-white border-slate-600;
+  }
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
