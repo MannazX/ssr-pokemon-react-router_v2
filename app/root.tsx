@@ -32,6 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="X1Hpy5vVGSTEX758iC2-4NSXtSvkE6ZIGzJb29blHY4" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
