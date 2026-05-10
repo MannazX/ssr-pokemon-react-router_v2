@@ -1,5 +1,6 @@
 import {
   isRouteErrorResponse,
+  Link,
   Links,
   Meta,
   Outlet,
@@ -26,9 +27,10 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-const store = makeStore();
+//const store = makeStore();
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const store = makeStore();
   return (
     <html lang="en">
       <head>
@@ -47,8 +49,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <SearchOptions />
               </div>
               <div className="flex justify-center gap-6 text-lg font-medium">
-                <a href='/' className="text-slate-300 hover:text-white hover:underline transition-colors">Home</a>
-                <a href='/kanto' className="text-slate-300 hover:text-white hover:underline transition-colors">Kanto</a>
+                <Link to='/' className="text-slate-300 hover:text-white hover:underline transition-colors">Home</Link>
+                <Link to='/kanto' className="text-slate-300 hover:text-white hover:underline transition-colors">Kanto</Link>
               </div>
             </div>
           </header>
