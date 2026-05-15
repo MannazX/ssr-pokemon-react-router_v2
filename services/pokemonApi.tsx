@@ -81,5 +81,5 @@ export const pokemonApi = createApi({
     
 });
 
-export const { useFetchPokemonKantoQuery, useFetchPokemonInfoQuery, useFetchPokemonByNameQuery, useLazyFetchPokemonByTypeQuery } = pokemonApi;
+export const { useFetchPokemonInfoQuery, useFetchPokemonByNameQuery, useFetchPokemonByTypeQuery } = pokemonApi;
 export const { fetchPokemonKanto, fetchPokemonInfo, fetchPokemonByName, fetchPokemonByType } = pokemonApi.endpoints;
