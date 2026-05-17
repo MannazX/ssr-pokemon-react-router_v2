@@ -5,4 +5,5 @@ export default [
     route("searchName", "routes/searchName.tsx"),
     route("searchType", "routes/searchType.tsx"),
     route("kanto", "routes/kanto.tsx"),
+    route("johto", "routes/johto.tsx"),
 ] satisfies RouteConfig;

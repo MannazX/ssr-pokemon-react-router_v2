@@ -51,6 +51,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex justify-center gap-6 text-lg font-medium">
                 <Link to='/' className="text-slate-300 hover:text-white hover:underline transition-colors">Home</Link>
                 <Link to='/kanto' className="text-slate-300 hover:text-white hover:underline transition-colors">Kanto</Link>
+                <Link to='/johto' className="text-slate-300 hover:text-white hover:underline transition-colors">Johto</Link>
               </div>
             </div>
           </header>

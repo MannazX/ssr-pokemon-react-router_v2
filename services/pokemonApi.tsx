@@ -29,6 +29,26 @@ export const pokemonApi = createApi({
                     });
                 },
             }),
+            fetchPokemonJohto: builder.query<Pokemon[], void>({
+                query: () => {
+                    return {
+                        url: 'pokemon',
+                        params: {
+                            offset: 151,
+                            limit: 100
+                        },
+                        method: 'GET',
+                    };
+                },
+                transformResponse: (response: PokemonResults) => {
+                    return response.results.map((pokemon) => {
+                        return {
+                            name: pokemon.name,
+                            url: pokemon.url 
+                        }
+                    });
+                },
+            }),
             fetchPokemonInfo: builder.query<PokemonDisplayInfo, Number | undefined>({
                 query: (id) => {
                     return {
@@ -82,4 +102,4 @@ export const pokemonApi = createApi({
 });
 
 export const { useFetchPokemonInfoQuery, useFetchPokemonByNameQuery, useFetchPokemonByTypeQuery } = pokemonApi;
-export const { fetchPokemonKanto, fetchPokemonInfo, fetchPokemonByName, fetchPokemonByType } = pokemonApi.endpoints;
+export const { fetchPokemonKanto, fetchPokemonJohto, fetchPokemonInfo, fetchPokemonByName, fetchPokemonByType } = pokemonApi.endpoints;
