@@ -49,6 +49,166 @@ export const pokemonApi = createApi({
                     });
                 },
             }),
+            fetchPokemonHoenn: builder.query<Pokemon[], void>({
+                query: () => {
+                    return {
+                        url: 'pokemon',
+                        params: {
+                            offset: 251,
+                            limit: 135
+                        },
+                        method: 'GET',
+                    };
+                },
+                transformResponse: (response: PokemonResults) => {
+                    return response.results.map((pokemon) => {
+                        return {
+                            name: pokemon.name,
+                            url: pokemon.url 
+                        }
+                    });
+                },
+            }),
+            fetchPokemonSinnoh: builder.query<Pokemon[], void>({
+                query: () => {
+                    return {
+                        url: 'pokemon',
+                        params: {
+                            offset: 386,
+                            limit: 107
+                        },
+                        method: 'GET',
+                    };
+                },
+                transformResponse: (response: PokemonResults) => {
+                    return response.results.map((pokemon) => {
+                        return {
+                            name: pokemon.name,
+                            url: pokemon.url 
+                        }
+                    });
+                },
+            }),
+            fetchPokemonUnova: builder.query<Pokemon[], void>({
+                query: () => {
+                    return {
+                        url: 'pokemon',
+                        params: {
+                            offset: 493,
+                            limit: 156
+                        },
+                        method: 'GET',
+                    };
+                },
+                transformResponse: (response: PokemonResults) => {
+                    return response.results.map((pokemon) => {
+                        return {
+                            name: pokemon.name,
+                            url: pokemon.url 
+                        }
+                    });
+                },
+            }),
+            fetchPokemonKalos: builder.query<Pokemon[], void>({
+                query: () => {
+                    return {
+                        url: 'pokemon',
+                        params: {
+                            offset: 649,
+                            limit: 72
+                        },
+                        method: 'GET',
+                    };
+                },
+                transformResponse: (response: PokemonResults) => {
+                    return response.results.map((pokemon) => {
+                        return {
+                            name: pokemon.name,
+                            url: pokemon.url 
+                        }
+                    });
+                },
+            }),
+            fetchPokemonAlola: builder.query<Pokemon[], void>({
+                query: () => {
+                    return {
+                        url: 'pokemon',
+                        params: {
+                            offset: 721,
+                            limit: 86
+                        },
+                        method: 'GET',
+                    };
+                },
+                transformResponse: (response: PokemonResults) => {
+                    return response.results.map((pokemon) => {
+                        return {
+                            name: pokemon.name,
+                            url: pokemon.url 
+                        }
+                    });
+                },
+            }),
+            fetchPokemonGalar: builder.query<Pokemon[], void>({
+                query: () => {
+                    return {
+                        url: 'pokemon',
+                        params: {
+                            offset: 809,
+                            limit: 89
+                        },
+                        method: 'GET',
+                    };
+                },
+                transformResponse: (response: PokemonResults) => {
+                    return response.results.map((pokemon) => {
+                        return {
+                            name: pokemon.name,
+                            url: pokemon.url 
+                        }
+                    });
+                },
+            }),
+            fetchPokemonHisui: builder.query<Pokemon[], void>({
+                query: () => {
+                    return {
+                        url: 'pokemon',
+                        params: {
+                            offset: 898,
+                            limit: 7
+                        },
+                        method: 'GET',
+                    };
+                },
+                transformResponse: (response: PokemonResults) => {
+                    return response.results.map((pokemon) => {
+                        return {
+                            name: pokemon.name,
+                            url: pokemon.url 
+                        }
+                    });
+                },
+            }),
+            fetchPokemonPaldea: builder.query<Pokemon[], void>({
+                query: () => {
+                    return {
+                        url: 'pokemon',
+                        params: {
+                            offset: 905,
+                            limit: 120
+                        },
+                        method: 'GET',
+                    };
+                },
+                transformResponse: (response: PokemonResults) => {
+                    return response.results.map((pokemon) => {
+                        return {
+                            name: pokemon.name,
+                            url: pokemon.url 
+                        }
+                    });
+                },
+            }),
             fetchPokemonInfo: builder.query<PokemonDisplayInfo, Number | undefined>({
                 query: (id) => {
                     return {
@@ -98,8 +258,20 @@ export const pokemonApi = createApi({
             }),
         }
     }
-    
 });
 
 export const { useFetchPokemonInfoQuery, useFetchPokemonByNameQuery, useFetchPokemonByTypeQuery } = pokemonApi;
-export const { fetchPokemonKanto, fetchPokemonJohto, fetchPokemonInfo, fetchPokemonByName, fetchPokemonByType } = pokemonApi.endpoints;
+export const { 
+    fetchPokemonKanto, 
+    fetchPokemonJohto, 
+    fetchPokemonHoenn, 
+    fetchPokemonSinnoh,
+    fetchPokemonUnova,
+    fetchPokemonKalos,
+    fetchPokemonAlola,
+    fetchPokemonGalar,
+    fetchPokemonHisui,
+    fetchPokemonPaldea,
+    fetchPokemonInfo, 
+    fetchPokemonByName, 
+    fetchPokemonByType } = pokemonApi.endpoints;

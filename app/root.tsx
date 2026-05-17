@@ -52,6 +52,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Link to='/' className="text-slate-300 hover:text-white hover:underline transition-colors">Home</Link>
                 <Link to='/kanto' className="text-slate-300 hover:text-white hover:underline transition-colors">Kanto</Link>
                 <Link to='/johto' className="text-slate-300 hover:text-white hover:underline transition-colors">Johto</Link>
+                <Link to='/hoenn' className="text-slate-300 hover:text-white hover:underline transition-colors">Hoenn</Link>
+                <Link to='/sinnoh' className="text-slate-300 hover:text-white hover:underline transition-colors">Sinnoh</Link>
+                <Link to='/unova' className="text-slate-300 hover:text-white hover:underline transition-colors">Unova</Link>
+                <Link to='/kalos' className="text-slate-300 hover:text-white hover:underline transition-colors">Kalos</Link>
+                <Link to='/alola' className="text-slate-300 hover:text-white hover:underline transition-colors">Alola</Link>
+                <Link to='/galar' className="text-slate-300 hover:text-white hover:underline transition-colors">Galar</Link>
+                <Link to='/hisui' className="text-slate-300 hover:text-white hover:underline transition-colors">Hisui</Link>
+                <Link to='/paldea' className="text-slate-300 hover:text-white hover:underline transition-colors">Paldea</Link>
               </div>
             </div>
           </header>
