@@ -22,7 +22,7 @@ function PokemonCard({pokemon} : {pokemon: Pokemon}) {
             <div className="card-header bg-slate-700 border-slate-600 text-white">
                 <span>{'#' + id}</span>
             </div>
-            <img src={image} className="card-img-top d-block mx-auto" alt={`Pokemon ${pokemon.name}`} style={{ width: '100%', height: 'auto' }} />
+            <img src={image} className="card-img-top d-block mx-auto" alt={pokemon.name} style={{ width: '100%', height: 'auto' }} />
             <div className="card-body text-center">
                 <h5 className="card-title text-white">
                     <span>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</span>
