@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router';
 import type { Pokemon } from "~/interfaces/pokemon";
 import PokemonInfo  from "./pokemonInfo";
 
@@ -22,10 +23,10 @@ function PokemonCard({pokemon} : {pokemon: Pokemon}) {
             <div className="card-header bg-slate-700 border-slate-600 text-white">
                 <span>{'#' + id}</span>
             </div>
-            <img src={image} className="card-img-top d-block mx-auto" alt={pokemon.name} style={{ width: '100%', height: 'auto' }} />
+            <img src={image} className="card-img-top d-block mx-auto" alt={`Pokemon ${pokemon.name}`} width={"96"} height={"96"} loading={"lazy"} style={{ width: '96px', height: '96px' }} />
             <div className="card-body text-center">
                 <h5 className="card-title text-white">
-                    <span>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</span>
+                    <Link to={`/pokemon/${pokemon.name}`} className="text-white hover:text-blue-400 transition-colors">{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</Link>
                 </h5>
                 <div className="text-center"><PokemonInfo id={id}/></div>
             </div>
