@@ -29,6 +29,17 @@ export async function loader(args: any) {
     }
 }
 
+export function meta() {
+    return [
+        {title: "Kanto Pokémon - Generation 1 (151 Original Pokémon)"},
+        {
+            name: "description",
+            content: "Browse the full list of 151 Kanto Region Pokémon"
+        },
+        { name: "robots", content: "index, follow" }
+    ];
+}
+
 export default function KantoPage() {
     const pokemonList = useLoaderData() as Pokemon[];
     if (!pokemonList || pokemonList.length === 0) {
