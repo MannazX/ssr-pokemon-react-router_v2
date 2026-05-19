@@ -36,7 +36,7 @@ export function meta() {
             name: "description",
             content: "Browse the full list of 151 Kanto Region Pokémon"
         },
-        { name: "robots", content: "index, follow" }
+        { name: "robots", content: "index" }
     ];
 }
 
