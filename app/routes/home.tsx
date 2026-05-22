@@ -5,8 +5,8 @@ import Front from "../front/frontPage";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Pokémon Finder SSR-WebApp with React Router v7" },
+    { name: "description", content: "Welcome to my Pokémon Finder app via PokeApi.co" },
   ];
 }
 
