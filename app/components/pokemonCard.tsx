@@ -15,8 +15,6 @@ function PokemonCard({pokemon} : {pokemon: Pokemon}) {
         id = parseInt(idSegment, 10);
         image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
     }
-    //console.log("ID: ", id);
-    //console.log("Pokemon: ", pokemon);
     return (
         <div className="card bg-slate-800 text-white border-slate-700 h-100 shadow-lg">
             <div className="card-header bg-slate-700 border-slate-600 text-white">
